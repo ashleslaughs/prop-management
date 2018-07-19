@@ -10,7 +10,7 @@ export function Header() {
     )
 }
 
-export default function HeaderBar() {
+export function HeaderBar() {
     return(
         <div className='bar'>  </div>
     )
