@@ -5,7 +5,7 @@ import { FormTitle } from '../formTitle';
 import { FormInput } from '../formFields';
 import TextLink from "../textLink";
 
-export default class SigninForm extends Component {
+class SigninForm extends Component {
     render() {
         return (
             <form className="sing-in-form">
@@ -34,7 +34,7 @@ export default class SigninForm extends Component {
                     title="Login"
                     component={FormButton}
                 />
-                <div className='sign-in-form__text-links'>
+                <div className='sign-in-form'>
                     <TextLink to='/forgot' text='Forgot Password'/>
                     <TextLink to='/sign up' text='Not a member? Register here'/>
                 </div>
@@ -46,3 +46,5 @@ export default class SigninForm extends Component {
 SigninForm = reduxForm({
     form: 'signin'
 })(SigninForm); 
+
+export default SignupForm; 
