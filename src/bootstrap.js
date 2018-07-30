@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
@@ -12,23 +12,17 @@ const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 // import 'bootstrap/dist/css/bootstrap.css';
 import './style/main.scss';
 
+import history from 'history'; 
 
-import Signup from './components/auth/signup';
-import Signin from './components/auth/signin';
 import Layout from './components/layout';
 
-import history from 'history'; 
 import requiereAuth from './components/requireAuth'; 
+import Signup from './components/auth/signup';
+import Signin from './components/auth/signin';
 
-class Dashboard extends Component {
-  render() {
-    return(
-      <div>
-        hey there
-      </div>
-    )
-  }
-}
+
+import Dashboard from './components/dashboard'; 
+
 
 function main() {
   ReactDOM.render(
