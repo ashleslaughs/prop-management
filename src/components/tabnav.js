@@ -18,3 +18,6 @@ class TabNav extends Component {
 
 
 export default TabNav; 
+
+//this mistake was made in the 22 video okay!
+//Week 6 'creting the tab nav grid on react
