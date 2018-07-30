@@ -1,0 +1,13 @@
+.tab-nav {
+    display: grid; 
+    grid-template-rows: [tab-s] 50px [tabs-e content-s] 1fr [content-e-]; 
+
+    &__tabs {
+        gird-row: tabs-e/tabs-e;
+        background: cornflowerblue
+    }
+
+    &__tab {
+
+    }
+}

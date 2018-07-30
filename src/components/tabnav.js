@@ -4,25 +4,17 @@ class TabNav extends Component {
     render() {
         return (
             <div className='tab-nav'>
-
+                <div className='tab-nav__tabs'>
+                {
+                    this.props.tabs.map((tab, index) => {
+                        return <a className='tab-nav__tab'> {tab.title} </a>
+                    })
+                }
+                </div>
+                <div> requests or newsletters content goes Headers.  </div>
             </div>
         )
 }
 
-
-// class TabNav extends Component {
-//     render() {
-        
-//         var JSX =[
-//             <h1> TABS </h1>
-//         ];
-
-//         this.props.tabs.map((tab, index) => {
-//             JSX.push(tab.component);
-//         })
-
-//         return JSX;
-//     }
-// }
 
 export default TabNav; 
