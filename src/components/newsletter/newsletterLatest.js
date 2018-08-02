@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 
+
 class NewsletterLatest extends Component {
     render() {
+        const { title, imageUrl, body } =this.props; 
         return (
             <div className='newsletter-latest'>
-                <h1 className='newsletter-latest__title'>Title goes here </h1>
-                <img className='newsletter-latest__image' src='http://via.placeholder.com/960x258 ' />
+                <h1 className='newsletter-latest__title'>{title}</h1>
+                <img className='newsletter-latest__image' src={imageUrl} />
                 <div className='newsletter-latest__body'>
-                    <p> Lorem ipsum. this is a bunch of random text because that is what he put is lorem ipsu has been the induryt's standard dummy text loool . he was in the industry ? </p>
+                    <p> {body} </p>
                 </div>
             </div>
         )
