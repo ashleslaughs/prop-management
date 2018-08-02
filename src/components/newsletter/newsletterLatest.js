@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class NewsletterLatest extends Component {
 
     handleEdit = () => {
-        this.props.history.push('/newsletter/edit')''
+        this.props.history.push('/newsletter/edit');
     }
 
     render() {
