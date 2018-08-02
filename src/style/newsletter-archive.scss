@@ -23,8 +23,11 @@
 }
 
 .archive-item {
+    margin-top: 1.6rem;
     display: grid;
-    grid-row-gap: 3px;  
+    grid-row-gap: 1.6rem;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    align-content: start;
 
     &__title {
         font-size: 1.4rem;
