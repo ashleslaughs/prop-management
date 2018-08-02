@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Dashboard from './dashboard';
 
-class TabNav extends Component {
+export default class TabNav extends Component {
     render() {
         return (
             <div className='tab-nav'>
@@ -15,7 +15,8 @@ class TabNav extends Component {
                 <div className='tab-nav__tabs'>
             {
                 this.props.tabs.map((tab, index) => {
-                    return <a key={index} onClick={() => this.props.handleClick(tab.title)} className='tab-nav__tab'>{tab.title}</a>
+                    const className = `tab-nav__tab ${tab.active ? 'tab-nav__active': '' }`
+                    return <a key={index} onClick={() => this.props.handleClick(tab.title)} className={className}>{tab.title}</a>
                 })
             }
                 </div>
@@ -32,10 +33,7 @@ class TabNav extends Component {
                 }
             </div>
         )
-}
-
-
-export default TabNav; 
+} 
 
 //this mistake was made in the 22 video okay!
 //Week 6 'creting the tab nav grid on react
