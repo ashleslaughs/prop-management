@@ -5,7 +5,13 @@ import NewsletterArchive from './newsletterArchive';
 import NewsletterLatest from './newsletterLatest';
 import Button from '../button';
 
+
 class NewsletterGrid extends Component {
+
+    handleAddNewsletter= () => {
+        this.props.history.push('/newsletter/new');
+    }
+
     render() {
 
         const latest = {
@@ -16,9 +22,6 @@ class NewsletterGrid extends Component {
             imageUrl: 'http://via.placeholder.com/960x258'
         }
 
-        handleAddNewsletter= () => {
-            this.props.history.push('/newsletter/new');
-        }
 
 
         return (
@@ -26,7 +29,7 @@ class NewsletterGrid extends Component {
                 <Button className='newsletter-grid__button' icon='fas fa-plus' callback={() => this.handleAddNewsletter()} />
                 <NewsletterBox date={newDate()}/>
                 <NewsletterArchive/>
-                <NewsletterLatest {...latest}/>
+                <NewsletterLatest history={this.props.history} {...latest}/>
             </div>
         )
     }
