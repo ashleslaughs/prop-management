@@ -35,5 +35,5 @@ export default class TabNav extends Component {
         )
 } 
 
-//this mistake was made in the 22 video okay!
-//Week 6 'creting the tab nav grid on react
+//this mistake was made in the 22 video okay
+//creating the tab nav

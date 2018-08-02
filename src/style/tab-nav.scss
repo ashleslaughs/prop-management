@@ -2,6 +2,8 @@
     display: grid; 
     grid-template-rows: [tab-s] 50px [tabs-e content-s] 1fr [content-e-]; 
 
+    height: 100%;
+
     &__tabs {
         grid-row: tabs-e/tabs-e;
         background: cornflowerblue;
@@ -15,7 +17,7 @@
 
         justify-content: center; 
 
-        grid-column-gap: 4.5rem; 
+        grid-column-gap: 4.6rem; 
 
         border-bottom: 1px solid $color-gray-E6; 
     }
