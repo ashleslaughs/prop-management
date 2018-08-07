@@ -2,15 +2,17 @@ import React, {Component} from 'react';
 
     export class FormInput extends Component {
         render() {
-            const { className, title, input, type, placeholder } = this.props; 
+            const { className, title, input, type, placeholder, value } = this.props; 
             return (
                 <div className= {`${className} form-input`}>
                     <label className='form-input__title'>{title}</label>
                     <input 
                         className='form-input__input'
                         type={type}
-                        {...input}
+                        
                         placeholder={placeholder}
+                        value={editValue ? editValue : input.value}
+                        {...input}
                     />
                 </div> 
             )
@@ -62,7 +64,7 @@ import React, {Component} from 'react';
 
     export class FormTextArea extends Component {
         render() {
-            const { className, title, input, type, placeholder } = this.props; 
+            const { className, title, input, type, placeholder, value } = this.props; 
             return (
                 <div className= {`${className} form-textarea`}>
                     <label className='form-textarea__title'>{title}</label>
@@ -71,6 +73,7 @@ import React, {Component} from 'react';
                         type={type}
                         {...input}
                         placeholder={placeholder}
+                        value={editValue ? editValue : input.value}
                     >
                     </textarea>
                 </div> 
