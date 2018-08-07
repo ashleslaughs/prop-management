@@ -11,6 +11,11 @@ class EditNewsletter extends Component {
     onCancel = () => {
         this.props.history.push('/dashboard')
     }
+
+    componentDidMount() {
+        console.log(this.props.match.params.id);
+    }
+
     render() {
         return (
             <div className='new-newsletter'>

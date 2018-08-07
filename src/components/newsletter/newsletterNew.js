@@ -10,7 +10,7 @@ class NewNewsletter extends Component {
 
     onCancel = () => {
         this.props.history.push('/dashboard')
-    }
+    }   
     render() {
         return (
             <div className='new-newsletter'>
