@@ -38,7 +38,7 @@ import React, {Component} from 'react';
 
     export class FormButton extends Component {
         render() {
-            const { className, title, input, type, small } = this.props; 
+            const { className, title, input, type, small, danger, onClick } = this.props; 
             return (
                 <div className= {`${className} ${small ? 'form-button-small' : 'form-button'}`}>
                     <button
@@ -49,7 +49,7 @@ import React, {Component} from 'react';
 
                         type={type}
                         {...input}
-                        placeholder={placeholder}
+                        onClick={onClick}
                     > 
                     {title} 
                     </button>
