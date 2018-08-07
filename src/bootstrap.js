@@ -19,11 +19,13 @@ import Layout from './components/layout';
 import requireAuth from './components/requireAuth'; 
 import Signup from './components/auth/signup';
 import Signin from './components/auth/signin';
+
+import Dashboard from './components/dashboard'; 
 import NewNewsletter from './components/newsletter/newsletterNew.js';
 import EditNewsletter from './components/newsletter/newsletterEdit';
 import EditNewsletter from './components/newsletter/newsletterDetail';
 
-import Dashboard from './components/dashboard'; 
+
 
 
 function main() {
@@ -37,9 +39,13 @@ function main() {
             <Route path='/signup' component={Signup}/>
 
             <Route path='/dashboard' component={requireAuth(Dashboard)}/>
+
+
             <Route path='/dashboard' component={requireAuth(NewNewsletter)}/>
             <Route path='/newsletter/edit/:id' component={requireAuth(EditNewsletter)}/>
             <Route path='/newsletter/detail/:id' component={requireAuth(NewsletterDetail)}/>
+
+            <Route path='/request/new' component={requireAuth(NewNewsletter)}/>
           </Layout>
         </Switch> 
       </Router>
