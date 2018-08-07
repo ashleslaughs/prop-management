@@ -31,6 +31,16 @@ class NewNewsletterForm extends Component {
                     component={FormTextArea}
                 />
 
+                <Field 
+                    className="sign-in-form__submit"
+                    small={true}
+                    danger={true}
+                    name="Submit"
+                    type="submit"
+                    title="submit"
+                    component={FormButton}
+                />
+
             </form>
         );
     }
