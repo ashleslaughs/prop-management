@@ -20,6 +20,7 @@ import requireAuth from './components/requireAuth';
 import Signup from './components/auth/signup';
 import Signin from './components/auth/signin';
 import NewNewsletter from './components/newsletter/newsletterNew.js';
+import EditNewsletter from './components/newsletter/newsletterEdit';
 
 
 import Dashboard from './components/dashboard'; 
@@ -37,6 +38,7 @@ function main() {
 
             <Route path='/dashboard' component={requireAuth(Dashboard)}/>
             <Route path='/dashboard' component={requireAuth(NewNewsletter)}/>
+            <Route path='/newsletter/edit/:id' component={requireAuth(EditNewsletter)}/>
           </Layout>
         </Switch> 
       </Router>
