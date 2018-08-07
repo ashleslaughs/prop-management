@@ -5,11 +5,11 @@ import NewNewsletterForm from './newsletterNewForm.js';
 class NewNewsletter extends Component {
 
     onSubmit = (fields) => {
-        console.log('trying to handle submit');
+        this.props.history.push('/dashboard');
     }
 
     onCancel = () => {
-        console.log('trying to cancel')
+        this.props.history.push('/dashboard')
     }
     render() {
         return (
