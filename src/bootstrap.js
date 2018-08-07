@@ -16,9 +16,10 @@ import history from 'history';
 
 import Layout from './components/layout';
 
-import requiereAuth from './components/requireAuth'; 
+import requireAuth from './components/requireAuth'; 
 import Signup from './components/auth/signup';
 import Signin from './components/auth/signin';
+import NewNewsletter from './components/newsletter/newsletterNew.js';
 
 
 import Dashboard from './components/dashboard'; 

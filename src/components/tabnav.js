@@ -34,6 +34,7 @@ export default class TabNav extends Component {
             </div>
         )
 } 
+}
 
 //this mistake was made in the 22 video okay
-//creating the tab nav
+// //creating the tab nav
