@@ -5,6 +5,7 @@
 
 .sign-up-form  {
     display: grid;
+    grid-template-columns: [s] 1fr [input-s] 629px [input-e] 1fr [e]; 
     justify-items: center; 
 
     &__title {
