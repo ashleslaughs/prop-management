@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../actions';
 
 import NewsletterBox from './newsletterBox';
 import NewsletterArchive from './newsletterArchive';
@@ -12,6 +14,10 @@ class NewsletterGrid extends Component {
         this.props.history.push('/newsletter/new');
     }
 
+    componentDidMount() {
+        this.props.fetchNewsletters(); 
+    }
+
     render() {
 
         const latest = {
@@ -20,8 +26,7 @@ class NewsletterGrid extends Component {
             body: 'is simply dummy text of the printing and typesetting industry.',
             date: new Date(),
             imageUrl: 'http://via.placeholder.com/960x258'
-        }
-
+        },
 
 
         return (
@@ -35,4 +40,4 @@ class NewsletterGrid extends Component {
     }
 }
 
-export default NewsletterGrid; 
+export default connect(null, actions)(NewsletterGrid);
